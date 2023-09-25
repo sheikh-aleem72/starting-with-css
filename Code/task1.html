@@ -1,0 +1,39 @@
+<!-- Create a simple page with some div tags and show different ways to add CSS as well as what happens if you target the same elements with inline, internal and external CSS. Also utilize comments in the project where required. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starting with CSS</title>
+    <link rel="stylesheet" href="task1.css" />
+    <style>
+      .box1 {
+        background-color: orange; /*Box1 will have background as orange becasue internal CSS has higher preceedecy over external CSS */
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        border: 2px solid black;
+      }
+      .box2 {
+        background-color: white;
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        border: 2px solid black;
+      }
+      .box3 {
+        background-color: green;
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="width: 300px" class="box1">box1</div>
+    <!--box1 will have 300px width as inline CSS has highest priority.-->
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </body>
+</html>
